@@ -2,4 +2,4 @@
 git_user_name: "donsantmajor"
 git_user_email: "donsantmajor@gmail.com"
 git_repo: "/Users/donsantmajor/code/ansible/ansible-docker-rancher-utils/"
-git_origin_repo: "/Users/donsantmajor/code/ansible/ansible-docker-rancher-utils.git"
+git_origin_repo: "git@github.com:dsantmajor/ansible-docker-rancher-utils.git"
