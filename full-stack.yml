@@ -1,0 +1,14 @@
+---
+  - name: Setting up the git configuration
+    hosts: all
+    # user: root
+    become: yes
+
+    roles:
+      - setup-git-config
+
+    # environment:
+    #   http_proxy:   http://proxy.auiag.corp:8080
+    #   https_proxy:  http://proxy.auiag.corp:8080
+    #   no_proxy:  swlibrary.iag.com.au,localhost,localhost.localdomain,127.*,.auiag.corp,.iaglimited.net,.iagcloud,.iag.com.au
+    #
