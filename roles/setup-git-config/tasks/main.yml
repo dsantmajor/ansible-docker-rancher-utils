@@ -49,3 +49,7 @@
   with_items:
     - {name: "remote.origin.url", value: "{{ git_origin_repo }}" }
     # value: user.email
+- name: List all Git variables
+  git_config:
+    list_all=yes
+    repo="{{git_repo}}"
