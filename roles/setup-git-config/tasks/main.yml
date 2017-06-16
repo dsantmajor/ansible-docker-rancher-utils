@@ -53,3 +53,15 @@
   git_config:
     list_all=yes
     repo="{{git_repo}}"
+
+- name: Inspect a single image
+  docker_image_facts:
+    name="rancher/server"
+# - name: remove docker-py
+#   pip:
+#     name: docker-py
+#     state: absent
+#
+# - name: Install docker python module
+#   pip:
+#     name: "docker-compose==1.12.0"

@@ -1,0 +1,28 @@
+---
+# tasks for git setup
+
+## List of tasks which need to be run against the host ##
+
+# - name: "Setup variables"
+#   include_vars: "../envs/{{ envname }}.yml"
+
+- name: "Configure Git User"
+  git_config:
+    name: user.email
+    repo: /etc
+    scope: local
+    value: 'root@{{ ansible_fqdn }}'
+
+   # Ansible > 2.1
+- name: Setup default git configuraiton
+  git_config:
+    name="{{ item.name }}"
+    repo=./ansible-docker-rancher-utils
+    scope=local
+    value="{{ item.value }}"
+  with_items:
+    - {name: "user.name",  value: "UserName" }
+    - {name: "user.email", value: "user.name@gmail.com" }
+    - {name: "ui.color",   value: "True" }
+
+  ## Need extra stuff here to configure the boot config ##
